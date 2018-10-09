@@ -7,7 +7,7 @@
       "metadata": {
         "description": "The base URI where artifacts required by this template are located."
       },
-      "defaultValue": "https://cloudmouswprdsta01.blob.core.windows.net/realtimepoc"
+      "defaultValue": "https://demosto2304.blob.core.windows.net/demoenv"
     }
   },
   "variables": {},
@@ -36,27 +36,10 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateDCPMachine.json')]"
+          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateIISMachine.json')]"
         },
         "parametersLink": {
-          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateDCPMachineParameters.json')]"
-        }
-      }
-    },
-    {
-      "apiVersion": "2017-05-10",
-      "name": "CreateLinuxMachine",
-      "type": "Microsoft.Resources/deployments",
-      "dependsOn": [
-        "CreateVirtualNetwork"
-      ],
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateLinuxVM.json')]"
-        },
-        "parametersLink": {
-          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateLinuxVMParameters.json')]"
+          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateIISMachineParameters.json')]"
         }
       }
     },
@@ -88,20 +71,6 @@
         },
         "parametersLink": {
           "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateASRVaultParameters.json')]"
-        }
-      }
-    },
-    {
-      "apiVersion": "2017-05-10",
-      "name": "CreateAzureMigrate",
-      "type": "Microsoft.Resources/deployments",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateAzureMigrate.json')]"
-        },
-        "parametersLink": {
-          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateAzureMigrateParameters.json')]"
         }
       }
     }
