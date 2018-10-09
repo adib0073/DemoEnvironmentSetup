@@ -59,20 +59,6 @@
           "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateWindowsVMParameters.json')]"
         }
       }
-    },
-    {
-      "apiVersion": "2017-05-10",
-      "name": "CreateASRVault",
-      "type": "Microsoft.Resources/deployments",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateASRVault.json')]"
-        },
-        "parametersLink": {
-          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateASRVaultParameters.json')]"
-        }
-      }
     }
   ],
   "outputs": {}

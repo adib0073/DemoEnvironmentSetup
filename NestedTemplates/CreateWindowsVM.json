@@ -34,14 +34,14 @@
     },
     "virtualNetworkName": {
       "type": "string",
-      "defaultValue": "cloudmo-pocvnet",
+      "defaultValue": "pocvnet",
       "metadata": {
         "description": "Name of existing virtual network to be used"
       }
     },
     "subnetName": {
       "type": "string",
-      "defaultValue": "cloudmo-pocsubnet",
+      "defaultValue": "pocsubnet",
       "metadata": {
         "description": "Name of existing subnet within virtual network to be used"
       }
