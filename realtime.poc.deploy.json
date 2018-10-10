@@ -28,7 +28,21 @@
     },
     {
       "apiVersion": "2017-05-10",
-      "name": "CreateDCPMachine",
+      "name": "CreateASRVault",
+      "type": "Microsoft.Resources/deployments",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateASRVault.json')]"
+        },
+        "parametersLink": {
+          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateASRVaultParameters.json')]"
+        }
+      }
+    },
+    {
+      "apiVersion": "2017-05-10",
+      "name": "CreateIISMachine",
       "type": "Microsoft.Resources/deployments",
       "dependsOn": [
         "CreateVirtualNetwork"

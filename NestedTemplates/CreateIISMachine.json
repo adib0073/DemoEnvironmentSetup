@@ -166,7 +166,7 @@
       },
       "resources": [
         {
-          "name": "Microsoft.Powershell.DSC",
+          "name": "IIS.Install.DSC",
           "type": "Microsoft.Resources/deployments",
           "apiVersion": "2018-08-01",
           "dependsOn": [

@@ -77,10 +77,10 @@
     <None Include="NestedTemplates\CreateVirtualNetworkParameters.json" />
     <None Include="NestedTemplates\CreateWindowsVM.json" />
     <None Include="NestedTemplates\CreateWindowsVMParameters.json" />
-    <None Include="Scripts\IISInstall.ps1" />
     <None Include="README.md" />
     <None Include="realtime.poc.deploy.json" />
     <None Include="realtime.poc.parameters.json" />
+    <None Include="Scripts\IISInstall.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".git\ms-persist.xml" />

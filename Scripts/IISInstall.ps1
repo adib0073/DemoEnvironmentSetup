@@ -21,5 +21,38 @@ Configuration InstallIIS
         Name = "Web-Mgmt-Console"
         Ensure = "Present"
     }
+	File Directory
+	{
+		Type = 'Directory'
+		DestinationPath = 'C:\DCPInstall'
+		Ensure = 'Present'
+	}
+    Script DownloadWebApp
+    {
+        GetScript = 
+        {
+            @{
+                GetScript = $GetScript
+                SetScript = $SetScript
+                TestScript = $TestScript
+                Result = ('True' -in (Test-Path C:\DCPInstall\SampleASPNetApp.zip))
+            }
+        }
+        SetScript = 
+        {
+            Invoke-WebRequest -Uri "https://demosto2304.blob.core.windows.net/demoenv/SampleASPNetApp.zip" -OutFile "C:\DCPInstall\SampleASPNetApp.zip"
+        }
+
+        TestScript = 
+        {
+            $Status = ('True' -in (Test-Path C:\DCPInstall\SampleASPNetApp.zip))
+            $Status -eq $True
+        }
+    }
+    Archive UnzipWebApp {
+        Ensure = 'Present'
+        Path = 'C:\DCPInstall\SampleASPNetApp.zip'
+        Destination = 'C:\inetpub\wwwroot'
+    }
   }
 } 
