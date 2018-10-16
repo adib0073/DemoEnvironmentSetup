@@ -73,6 +73,8 @@
     <None Include="NestedTemplates\CreateASRVaultParameters.json" />
     <None Include="NestedTemplates\CreateIISMachine.json" />
     <None Include="NestedTemplates\CreateIISMachineParameters.json" />
+    <None Include="NestedTemplates\CreateLinuxVM.json" />
+    <None Include="NestedTemplates\CreateLinuxVMParameters.json" />
     <None Include="NestedTemplates\CreateVirtualNetwork.json" />
     <None Include="NestedTemplates\CreateVirtualNetworkParameters.json" />
     <None Include="NestedTemplates\CreateWindowsVM.json" />

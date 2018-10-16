@@ -73,6 +73,23 @@
           "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateWindowsVMParameters.json')]"
         }
       }
+    },
+    {
+      "apiVersion": "2017-05-10",
+      "name": "CreateLinuxMachine",
+      "type": "Microsoft.Resources/deployments",
+      "dependsOn": [
+        "CreateVirtualNetwork"
+      ],
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateLinuxVM.json')]"
+        },
+        "parametersLink": {
+          "uri": "[concat(parameters('_artifactsLocation'), '/NestedTemplates/CreateLinuxVMParameters.json')]"
+        }
+      }
     }
   ],
   "outputs": {}
