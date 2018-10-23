@@ -79,6 +79,8 @@
     <None Include="NestedTemplates\CreateVirtualNetworkParameters.json" />
     <None Include="NestedTemplates\CreateWindowsVM.json" />
     <None Include="NestedTemplates\CreateWindowsVMParameters.json" />
+    <None Include="NestedTemplates\DomainJoinWindowsVM.json" />
+    <None Include="NestedTemplates\DomainJoinWindowsVMParameters.json" />
     <None Include="README.md" />
     <None Include="realtime.poc.deploy.json" />
     <None Include="realtime.poc.parameters.json" />

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "domainToJoin": {
+      "value": "contoso.com"
+    },
+    "domainUsername": {
+      "value": "LabAdmin"
+    },
+    "domainPassword": {
+      "value": "*********"
+    },
+    "domainJoinOptions": {
+      "value": 3
+    },
+    "vmName": {
+      "value": "lit-prod-aip01"
+    }
+  }
+}
