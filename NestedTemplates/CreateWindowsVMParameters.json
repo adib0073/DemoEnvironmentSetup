@@ -6,10 +6,10 @@
       "value": "localadmin"
     },
     "adminPassword": {
-      "value": "*********"
+      "value": "Microsoft@123"
     },
     "vmName": {
-      "value": "mis-dev-win01"
+      "value": "WA-VM-win01"
     }
   }   
 }
