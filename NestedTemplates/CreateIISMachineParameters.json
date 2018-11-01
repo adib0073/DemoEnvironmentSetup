@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vmName": {
-      "value": "WA-VM-IIS-19"
+      "value": "WA-VM-IIS-08"
     },
     "adminUsername": {
       "value": "adminVM"
