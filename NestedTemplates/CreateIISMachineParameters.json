@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vmName": {
-      "value": "mis-poc-iis01"
+      "value": "WA-VM-IIS-19"
     },
     "adminUsername": {
-      "value": "locadmin"
+      "value": "adminVM"
     },
     "adminPassword": {
-      "value": "**********"
+      "value": "Microsoft@123"
     },
     "dsclink": {
       "value": "https://demosto2304.blob.core.windows.net/demoenv/IISInstall.zip"
